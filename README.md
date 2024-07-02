@@ -32,4 +32,4 @@ $ npm run build
 
 ## Copyright
 
-This work is copyrighted to Anadameth Astronomy Society, Anandamaithreya Central College, Sri Lanka under ![LICENSE.md](GPLv2). Article text and images are CC-BY-SA unless otherwise specified within the content.
+This work is copyrighted to Anadameth Astronomy Society, Anandamaithreya Central College, Sri Lanka under ![GNU General Public License Version 2.0](LICENSE.md). Article text and images are CC-BY-SA unless otherwise specified within the content.
