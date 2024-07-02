@@ -1,4 +1,4 @@
-# Anadameth Astronomy Web
+a# Anadameth Astronomy Web
 
 The Official website for Astronomy Society of Anandamaithreya Central College, Balangoda, Sri Lanka.
 
