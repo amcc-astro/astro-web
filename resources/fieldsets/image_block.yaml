@@ -1,0 +1,22 @@
+title: 'Image Block'
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      folder: articles
+      restrict: true
+      type: assets
+      display: Image
+  -
+    handle: caption
+    field:
+      type: text
+      display: Caption
+  -
+    handle: copyright
+    field:
+      default: '&copy Astronomy Society, Anandamaithreya Central College CC-BY-SA'
+      type: text
+      display: Copyright

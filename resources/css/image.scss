@@ -1,0 +1,42 @@
+.image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 1ch;
+    overflow: clip;
+
+    height: fit-content;
+
+    img {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .caption {
+        display: flex;
+
+        flex-direction:column;
+        position: absolute;
+        bottom: 0;
+        left: -1ch;
+        right: -1ch;
+        padding: 1ch;
+        padding-left: 2ch;
+        padding-right: 2ch;
+        transform: translateY(100%);
+
+        background-color: #2f090695;
+        color: white;
+        transition: 0.25s ease-out;
+
+        span {
+            padding: 1ch;
+            display: flex;
+        }
+    }
+
+    &:hover .caption {
+        transform: translateY(0px);
+    }
+}

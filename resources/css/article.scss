@@ -6,12 +6,12 @@ article {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
+    align-self: center;
 
     padding: 2ch;
     width: 100%;
-    max-width: 70ch;
-    min-height: 100dvh;
-    height: fit-content;
+    max-width: 90ch;
+    overflow: clip;
 
     border-radius: 1ch;
     border-bottom-left-radius: 0;
@@ -25,9 +25,15 @@ article {
         border-radius: 0;
     }
 
-    img {
-        max-width: 100%;
-        border-radius: 1ch;
+    &.detached {
+        margin-bottom: 1ch;
+        border-bottom-left-radius: 1ch;
+        border-bottom-right-radius: 1ch;
+    }
+
+    &.wrap {
+        height: auto;
+        min-height: fit-content;
     }
 }
 
@@ -46,7 +52,7 @@ article {
     position: relative;
     background-size: cover;
     background-position: center;
-    min-height: 50%;
+    min-height: 20vh;
 
     * {
         z-index: 1;

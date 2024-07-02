@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Lax Alt'
 size: 361431
 last_modified: 1719209918
 width: 1180

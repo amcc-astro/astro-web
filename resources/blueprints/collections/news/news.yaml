@@ -45,7 +45,6 @@ tabs:
                 - removeformat
                 - quote
                 - anchor
-                - image
                 - table
                 - alignleft
                 - aligncenter
@@ -58,6 +57,16 @@ tabs:
               type: bard
               display: 'Article Content'
               container: news_images
+              sets:
+                content:
+                  display: Content
+                  sets:
+                    image:
+                      display: Image
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image_block
           -
             handle: author
             field:
@@ -92,3 +101,7 @@ tabs:
               default: now
               validate:
                 - required
+  seo:
+    display: SEO
+    sections:
+      - {  }

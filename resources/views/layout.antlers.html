@@ -4,8 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ vite src="resources/js/main.js|resources/css/main.css" }}
-    <title>AMCC Astronomy Society</title>
+    <meta name="description" content="The official website of Astronomy Society of Ananda Maithreya CC">
+    <meta name="keywords" content="AMCCAstro, Ananda Maithreya Central College, AMCC, Astronomy, Astro, Astronomy Society">
+
+    {{ metatags:basic }}
+    {{ metatags:advanced }}
+    {{ metatags:opengraph }}
+
+    {{ vite src="resources/js/main.js|resources/css/main.scss" }}
+
+    <title> {{ society:name }} </title>
+    <link rel="icon" type="image/x-icon" href="{{ society:logo }}">
   </head>
   <body>
 

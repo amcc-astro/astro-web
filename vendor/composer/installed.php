@@ -172,6 +172,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'gioppy/statamic-metatags' => array(
+            'pretty_version' => '4.0.2',
+            'version' => '4.0.2.0',
+            'reference' => 'ed443f00ce949ee78f53faf99e36240e297b9e8a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../gioppy/statamic-metatags',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.2',
             'version' => '1.1.2.0',

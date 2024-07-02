@@ -1145,6 +1145,58 @@
             "install-path": "../fruitcake/php-cors"
         },
         {
+            "name": "gioppy/statamic-metatags",
+            "version": "4.0.2",
+            "version_normalized": "4.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gioppy/statamic-metatags.git",
+                "reference": "ed443f00ce949ee78f53faf99e36240e297b9e8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gioppy/statamic-metatags/zipball/ed443f00ce949ee78f53faf99e36240e297b9e8a",
+                "reference": "ed443f00ce949ee78f53faf99e36240e297b9e8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "statamic/cms": "^4.0|^5.0"
+            },
+            "time": "2024-06-04T13:24:10+00:00",
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Meta tags",
+                    "description": "An addon for Statamic 3 to manage and customize any meta tag."
+                },
+                "laravel": {
+                    "providers": [
+                        "Gioppy\\StatamicMetatags\\ServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Gioppy\\StatamicMetatags\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Giovanni Buffa",
+                    "email": "tech@giovannibuffa.it"
+                }
+            ],
+            "description": "An addon for Statamic 3 to manage and customize any meta tag.",
+            "support": {
+                "issues": "https://github.com/gioppy/statamic-metatags/issues",
+                "source": "https://github.com/gioppy/statamic-metatags/tree/4.0.2"
+            },
+            "install-path": "../gioppy/statamic-metatags"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.2",
             "version_normalized": "1.1.2.0",

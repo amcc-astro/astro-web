@@ -25,7 +25,6 @@ tabs:
                 - removeformat
                 - quote
                 - anchor
-                - image
                 - table
                 - underline
                 - superscript
@@ -39,6 +38,16 @@ tabs:
               container: news_images
               type: bard
               display: 'Text Content'
+              sets:
+                content:
+                  display: Content
+                  sets:
+                    image:
+                      display: Image
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image_block
           -
             handle: author
             field:
@@ -73,3 +82,7 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+  seo:
+    display: SEO
+    sections:
+      - {  }

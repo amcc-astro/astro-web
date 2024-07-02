@@ -1,0 +1,62 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Site
+        fields:
+          -
+            handle: copyright_notice
+            field:
+              default: '&copy; 2024 Ananda Maithreya Central College ICT Society </i>. Copyleft under <a href="">GPL V2 </a>'
+              type: textarea
+              display: 'Copyright Notice'
+      -
+        display: Home
+        fields:
+          -
+            handle: footer_content
+            field:
+              default: |-
+                <h1> Want to know more? </h1>
+                        <p> We are the students Astronomy Society government school Balangoda Ananda Maithreya Central College of Sri Lanka. You can find more about us on our <a href="/about">About Us</a> page.</p>
+              type: textarea
+              display: 'Footer Content'
+          -
+            handle: display_recent_articles
+            field:
+              type: toggle
+              display: 'Display Recent Articles'
+              default: true
+          -
+            handle: display_recent_news
+            field:
+              type: toggle
+              display: 'Display Recent News'
+              default: true
+          -
+            handle: display_youtube_section
+            field:
+              type: toggle
+              display: 'Display YouTube Section'
+              default: true
+      -
+        display: 'YouTube Section'
+        fields:
+          -
+            handle: entries
+            field:
+              max_rows: 3
+              min_rows: 3
+              type: grid
+              display: Entries
+              fields:
+                -
+                  handle: thumbnail
+                  field:
+                    max_files: 1
+                    container: assets
+                    folder: static
+                    restrict: true
+                    type: assets
+                    display: Thumbnail

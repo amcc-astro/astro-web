@@ -2,9 +2,9 @@
 <div class="slides">
     <div class="slide">
     <section class="hero row mobile-column bp:800">
-    <img src="/assets/static/logo.png"></img>
+    <img src="{{ society:logo }}"></img>
     <div class="column sizing:fit center-children:ismobile bp:800">
-        <h1> Anadameth Astronomy </h1>
+        <h1> {{ society:name }} </h1>
         <h2> Society </h2>
         <h3 class="desktop"> R/ Balangoda Ananda Maithreya Central College </h3>
     </div>
@@ -12,9 +12,14 @@
     </div>
 
     <section class="banner bg-secondary">
-        {{ text_content }}
+    {{ text_content }}
+        {{ if type==='text' }}
+            {{ text }}
+        {{ /if }}
+    {{ /text_content }}
     </section>
 
+    {{ if (site_globals:display_recent_news) }}
     <div class="slide" id="1">
     <page>
         <h1> Featured News </h1>
@@ -34,7 +39,9 @@
         </section>
     </page>
     </div>
+    {{ /if }}
 
+    {{ if (site_globals:display_recent_articles) }}
     <div class="slide" id="2">
     <page>
         <h1> Articles </h1>
@@ -53,34 +60,38 @@
         </section>
     </page>
     </div>
+    {{ /if }}
 
+    {{ if (society:link_to_youtube && site_globals:display_youtube_section) }}
     <div class="slide" id="3">
     <page>
         <h1 style="text-align:center;"> TouTube Channel </h1>
-        <section class="thumbnail-grid" id="g2">
-        <div class="thumbnail spanrow2" style="background-image:url('{{ featured_image }}');background-size:cover;"></div>
-        <div class="thumbnail"></div>
-        <div class="thumbnail"></div>
-        <a class="viewmore" target="" href="https://www.youtube.com/@anandamethastronomicalsociety">View More</a>
-        </section>
+        <a target="" href="{{ society:yt_url }}" class="thumbnail-grid" id="g2">
+            {{ site_globals:entries }}
+                <div class="thumbnail" style="background-image:url('{{ thumbnail }}');background-size:cover;"></div>
+            {{ /site_globals:entries }}
+            <span class="viewmore">View More</span>
+        </a>
     </page>
     </div>
+    {{ /if }}
 
     <div class="slide bg-default" id="4">
     <page>
-        <h1> Want to know more? </h1>
-        <p> You can find more about us on our <a href="">About Us</a> page or from our <a href="">Facebook</a> page.
+        {{ site_globals:footer_content }}
 
         <h1> Contact Us </h1>
-        <p> By <a href="">EMail</a> or from our <a href="">Contact</a> page. You can also find us at: </p>
+        <p> By <a href="mailto://{{ society:email }}">EMail</a> or through one of the platforms below: </p>
 
         <div class="pillgrid">
-        <div class="pillcard bg-green"> <i data-lucide="message-circle"></i> Whatsapp</div>
-        <div class="pillcard bg-blue"><i data-lucide="facebook"></i>Facebook</div>
-        <div class="pillcard bg-purple"> <i data-lucide="send"></i> Telegram</div>
+        {{ society:social_links }}
+            <a href="{{ link }}">
+                <div class="pillcard" style="background-color: {{ accent_color }};"> <img src="{{ icon }}" ></img> {{ name }} </div>
+            </a>
+        {{ /society:social_links}}
         </div>
 
-        <p class="footer"> <i> &copy; 2024 Ananda Maithreya Central College ICT Society </i>. Copyleft under <a href="">GPL V2</a> </p>
+        <p class="footer"> {{ site_globals:copyright_notice }} </p>
     </page>
     </div>
 

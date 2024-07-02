@@ -171,3 +171,36 @@
         }
     }
 }
+
+.positioning {
+    &\:relative {
+        position: relative;
+    }
+
+    &\:absolute {
+        position: absolute;
+    }
+
+    &\:fixed {
+        position: fixed;
+    }
+
+    &\:sticky {
+        position: sticky;
+    }
+
+}
+
+.sizing {
+    &\:fill-screen-height {
+        min-height: 100vh;
+    }
+
+    &\:fill-screen-width {
+        min-width: 100vw;
+    }
+
+    &\:fit-content {
+        height: fit-content;
+    }
+}

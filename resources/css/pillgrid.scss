@@ -6,23 +6,29 @@
 
     .pillcard {
         display: flex;
+
         padding: 1ch;
-        background-color: #111111;
-        color: white;
-        border-radius: 0.5ch;
         border: 1px solid #FFFFFF11;
-        box-shadow: 0 0 1ch 0.1ch black;
         margin: 1ch;
-        transition: 0.4s ease-out;
         justify-content: center;
         align-content: center;
         align-items: center;
-        text-decoration: none !important;
 
-        .lucide {
+        transition: 0.4s ease-out;
+        border-radius: 0.5ch;
+
+        color: white;
+        text-decoration: none !important;
+        box-shadow: 0 0 1ch 0.1ch black;
+        background-color: #111111;
+
+        img {
             margin-right: 1ch;
+            height: 4ch;
         }
     }
+
+    a { text-decoration: none; }
 
     @media screen and (max-width:600px){
         flex-direction: column;

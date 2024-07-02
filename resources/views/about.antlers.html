@@ -1,9 +1,39 @@
-<div class="row">
-<article>
+<div class="column">
+<article class="detached">
     <div class="row mobile-column article-head center-children" style="background-image:url('/assets/featured/ananda-maithreya-central-college-pic-1.jpg');">
     <!--img class="feature-logo invert" src="{{ featured_image }}"></img-->
     <h1>{{ title }}</h1>
     </div>
     {{ text_content }}
+        {{ if type==='text' }}
+            {{ text }}
+        {{ /if }}
+        {{ if type==='image' }}
+            <div class="image">
+                <img
+                    src="{{image}}"
+                    alt="{{image:alt}}"
+                >
+                <div class="caption">
+                    <span>{{ caption }}</span>
+                    <span>{{ copyright }}</span>
+                </div>
+            </div>
+        {{ /if }}
+    {{ /text_content }}
+
+    <p xmlns:cc="http://creativecommons.org/ns#" >The above text and all included media ( except when otherwise indicated ) is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+</article>
+<article class="wrap">
+    <h1> Socials </h1>
+    <div class="pillgrid">
+    {{ society:social_links }}
+        <a href="{{ link }}">
+            <div class="pillcard" style="background-color: {{ accent_color }};"> <img src="{{ icon }}" ></img> {{ name }} </div>
+        </a>
+    {{ /society:social_links}}
+    </div>
+    <p> {{ site_globals:copyright_notice }} </p>
 </article>
 </div>

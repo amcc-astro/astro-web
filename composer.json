@@ -10,10 +10,11 @@
     ],
     "require": {
         "php": "^8.2",
+        "gioppy/statamic-metatags": "^4.0",
         "laravel/framework": "^11",
         "laravel/reverb": "@beta",
         "laravel/tinker": "^2.9",
-        "statamic/cms": "^5.0",
+        "statamic/cms": "5.9.0",
         "statamic/collaboration": "^1.0"
     },
     "require-dev": {

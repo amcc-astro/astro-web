@@ -24,6 +24,7 @@ export default defineConfig({
                 'resources/css/slides.scss',
                 'resources/css/thumbnailgrid.scss',
                 'resources/css/typography.scss',
+                'resources/css/image.scss',
                 'resources/js/main.js',
 
                 // Control Panel assets.

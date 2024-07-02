@@ -1,0 +1,7 @@
+site_name: 'AMCC Astronomy Society'
+site_name_separator: '|'
+image_asset_container: /assets
+basics:
+  - site_verifications
+google:
+  - google_search

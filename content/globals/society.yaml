@@ -1,0 +1,23 @@
+title: Society
+data:
+  name: 'Anadameth Astronomy'
+  logo: static/logo.png
+  link_to_youtube: true
+  yt_url: 'https://www.youtube.com/@anandamethastronomicalsociety'
+  social_links:
+    -
+      id: ly1n1ybq
+      name: Whatsapp
+      icon: socials/4017334_circle_logo_media_network_social_icon.svg
+      accent_color: '#104a17'
+    -
+      id: ly1n5ih2
+      name: Telegram
+      icon: socials/3787425_telegram_logo_messanger_social_social-media_icon.svg
+      accent_color: '#1c71d8'
+    -
+      id: ly1n76tu
+      name: Facebook
+      icon: socials/317727_facebook_social-media_social_icon.svg
+      accent_color: '#62a0ea'
+      link: asd

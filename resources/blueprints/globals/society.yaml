@@ -1,0 +1,71 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Society
+        fields:
+          -
+            handle: name
+            field:
+              default: 'Anadameth Astronomy Society'
+              type: text
+              display: Name
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Logo
+      -
+        display: Socials
+        fields:
+          -
+            handle: link_to_youtube
+            field:
+              default: true
+              type: toggle
+              display: 'Link to youtube'
+          -
+            handle: yt_url
+            field:
+              input_type: url
+              type: text
+              display: 'Youtube Link'
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: EMail
+          -
+            handle: social_links
+            field:
+              type: grid
+              display: 'Social Links'
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                -
+                  handle: link
+                  field:
+                    input_type: url
+                    type: text
+                    display: Link
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Icon
+                -
+                  handle: accent_color
+                  field:
+                    type: color
+                    display: 'Accent Color'
+                    instructions: 'Accent color will be used to when needed to highlight the social links. This can be seen as the background color of the pills on home page.'
