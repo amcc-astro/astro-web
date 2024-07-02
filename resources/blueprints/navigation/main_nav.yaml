@@ -1,0 +1,32 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              placeholder: 'Page Name'
+              type: text
+              display: Name
+              instructions: 'The visible name of the page'
+              width: 75
+              listable: true
+          -
+            handle: immediate
+            field:
+              inline_label: 'Show in collapsed sidebar'
+              type: toggle
+              display: Immediate
+              instructions: 'Whether to display in the collapsed navigation bar. Only use for important pages'
+              width: 25
+              listable: true
+          -
+            handle: url
+            field:
+              input_type: url
+              type: text
+              display: Url
+              instructions: 'The url address of the page'
+              listable: true

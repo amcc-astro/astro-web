@@ -1,0 +1,102 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100vh;
+    position: relative;
+
+    * {
+        animation: appear-inverse 0.75s ease-in-out;
+    }
+
+    h1{
+        display: flex;
+        flex-grow: 0;
+        width: fit-content;
+
+        margin: 0.5rem;
+        margin-top: 1em;
+        padding: 0.25ch;
+        padding-left: 0.4ch;
+        padding-right: 0.4ch;
+        border-radius: 0.25ch;
+
+        background-color: white;
+        color: black;
+        mix-blend-mode: screen;
+
+        font-size: 3rem;
+        word-wrap: break-word;
+    }
+    h2 {
+        margin: 0.5rem; font-weight: normal; font-size: 2rem; word-wrap: break-word;
+        flex-grow: 0;
+        width: fit-content;
+    }
+    h3 {
+        flex-grow: 0;
+        width: fit-content;
+        word-wrap: break-word; margin: 0.5rem;
+    }
+
+    img{
+        display: flex;
+        height: 20ch;
+        filter: invert(100%);
+        animation: appear 0.75s ease-in-out;
+    }
+
+    @keyframes appear {
+        0% { opacity: 0; transform: translateY(8pt);}
+        100% { opacity: 1; transform: translateY(0px);}
+    }
+
+    @keyframes appear-inverse {
+        0% { opacity: 0; transform: translateY(-8pt);}
+        100% { opacity: 1; transform: translateY(0px);}
+    }
+
+    &::after{
+        display: box;
+        content: "";
+        position: fixed;
+        bottom: 3ch;
+        width: 2ch;
+        height: 2ch;
+        background-color: transparent;
+        border: 0.75ch solid #FFFFFF;
+        border-bottom-left-radius: 1ch;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+        transform: rotateZ(-45deg);
+        animation: bounce 1s ease-in infinite, hide 10s linear infinite;
+    }
+
+    @media screen and (max-width: 919px) {
+        text-align: center;
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 0.9rem; }
+
+        img {
+            height: 15ch;
+        }
+    }
+
+    @keyframes bounce {
+        0% { bottom: 3ch; }
+        50% { bottom: 2ch; }
+        100% { bottom: 3ch; }
+    }
+
+    @keyframes hide {
+        0% { opacity: 0.65; }
+        40% { opacity: 0.65; }
+        50% { opacity: 0; }
+        90% { opacity: 0; }
+        100% { opacity: 0.65; }
+    }
+}

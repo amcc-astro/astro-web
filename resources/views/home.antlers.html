@@ -1,0 +1,88 @@
+<div class="row">
+<div class="slides">
+    <div class="slide">
+    <section class="hero row mobile-column bp:800">
+    <img src="/assets/static/logo.png"></img>
+    <div class="column sizing:fit center-children:ismobile bp:800">
+        <h1> Anadameth Astronomy </h1>
+        <h2> Society </h2>
+        <h3 class="desktop"> R/ Balangoda Ananda Maithreya Central College </h3>
+    </div>
+    </section>
+    </div>
+
+    <section class="banner bg-secondary">
+        {{ text_content }}
+    </section>
+
+    <div class="slide" id="1">
+    <page>
+        <h1> Featured News </h1>
+        <section class="grid" id="g1">
+
+        {{ collection:news limit="5" }}
+        <a href="{{ url }}" class="card {{ first? 'spanrow2
+        ' : '' }}" style="background-image:url('{{ featured_image:url }}');">
+            <label>
+            <b>{{ title }}</b>
+            <p>
+                {{ abstract }}
+            </p>
+            </label>
+        </a>
+        {{ /collection:news }}
+        </section>
+    </page>
+    </div>
+
+    <div class="slide" id="2">
+    <page>
+        <h1> Articles </h1>
+        <section class="grid" id="g2">
+
+        {{ collection:articles limit="5" }}
+        <a href="{{ url }}" class="card" style="background-image:url('{{ featured_image:url }}');">
+            <label>
+            <b>{{ title }}</b>
+            <p>
+                {{ abstract }}
+            </p>
+            </label>
+        </a>
+        {{ /collection:articles }}
+        </section>
+    </page>
+    </div>
+
+    <div class="slide" id="3">
+    <page>
+        <h1 style="text-align:center;"> TouTube Channel </h1>
+        <section class="thumbnail-grid" id="g2">
+        <div class="thumbnail spanrow2" style="background-image:url('{{ featured_image }}');background-size:cover;"></div>
+        <div class="thumbnail"></div>
+        <div class="thumbnail"></div>
+        <a class="viewmore" target="" href="https://www.youtube.com/@anandamethastronomicalsociety">View More</a>
+        </section>
+    </page>
+    </div>
+
+    <div class="slide bg-default" id="4">
+    <page>
+        <h1> Want to know more? </h1>
+        <p> You can find more about us on our <a href="">About Us</a> page or from our <a href="">Facebook</a> page.
+
+        <h1> Contact Us </h1>
+        <p> By <a href="">EMail</a> or from our <a href="">Contact</a> page. You can also find us at: </p>
+
+        <div class="pillgrid">
+        <div class="pillcard bg-green"> <i data-lucide="message-circle"></i> Whatsapp</div>
+        <div class="pillcard bg-blue"><i data-lucide="facebook"></i>Facebook</div>
+        <div class="pillcard bg-purple"> <i data-lucide="send"></i> Telegram</div>
+        </div>
+
+        <p class="footer"> <i> &copy; 2024 Ananda Maithreya Central College ICT Society </i>. Copyleft under <a href="">GPL V2</a> </p>
+    </page>
+    </div>
+
+</div>
+</div>

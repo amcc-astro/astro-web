@@ -1,0 +1,7 @@
+tree:
+  -
+    id: 2228cba0-aefc-416b-86c9-a8a8dcba9d2e
+    entry: home
+    data:
+      name: Home
+      immediate: true

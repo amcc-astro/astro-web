@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ vite src="resources/js/main.js|resources/css/main.css" }}
+    <title>AMCC Astronomy Society</title>
+  </head>
+  <body>
+
+    <div class="star-cont">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+    <header></header>
+    <main>
+      <mobilenav><i data-lucide="menu"></i></mobilenav>
+      <nav>
+        {{ nav from="pages" include_home="true" }}
+            <a href="{{ url }}"
+                class=" {{count > 3 ? 'visible:onactive': ''}}
+                        {{ is_current ? 'active' : '' }}">
+                {{ title }}
+            </a>
+        {{ /nav  }}
+        <a id="menu">
+          <i data-lucide="menu" class="visible:oninactive">|||</i>
+          <i data-lucide="x" class="visible:onactive">X</i>
+        </a>
+      </nav>
+      {{ template_content }}
+    </main>
+    <footer></footer>
+
+    <div class="pixels" inert tab-index=-1>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

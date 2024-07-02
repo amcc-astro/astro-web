@@ -1,0 +1,52 @@
+@use 'sass:color';
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url(../../assets/fonts/Orbitron/Orbitron.ttf);
+}
+
+body {
+    font-family: "Orbitron", helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+p a {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  position: relative;
+
+  &::after{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    border-bottom: 0.2ch solid color.adjust(orange, $hue: +10);
+    content: "";
+    transition: 0.25s ease-out;
+  }
+
+  &:hover {
+    color: color.adjust(orange, $hue: +10);
+    border: 0px;
+
+    &::after{
+      width: 100%;
+      left: 0%;
+    }
+  }
+}
+
+blockquote {
+  border-left: 0.2rem solid dodgerblue;
+  padding: 2rem;
+  margin: 0;
+  background-color: #1e90ff1c;
+  background: linear-gradient(90deg, #1e90ff1c, transparent);
+}

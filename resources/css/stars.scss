@@ -1,0 +1,178 @@
+// Backdrop stars
+
+.star-cont{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.75;
+}
+// n is number of stars required
+@function multiple-box-shadow ($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n{
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';}
+
+  @return unquote($value);
+}
+
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100);
+
+#stars{
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  translateX: -1000px;
+  //animation: animStar 50s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    right: -2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  translateX: -1000px;
+  //animation: animStar 100s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    right: -2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  translateX: -1000px;
+  //animation: animStar 150s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    right: -2000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;}
+
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+
+  color: #FFF;
+  text-align: center;
+  font-family: 'lato',sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+
+  margin-top: -60px;
+  padding-left: 10px;
+
+  span {
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
+}
+
+@keyframes animStar {
+  from{
+    transform: translateY(0px);}
+  to{
+    transform: translateY(-2000px);}
+}
+
+// Pointer stars
+
+.pixels{
+    display: block;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    tab-index: -1;
+    inert: true;
+    pointer-events: none;
+}
+
+.pixels div {
+    display: block;
+    position: absolute;
+    top: 10ch;
+    right: 10ch;
+    background-color: #AAFFFF;
+    border-radius: 100%;
+    opacity: 0;
+    mouse-event: none;
+    animation: 1s infinite alternate blink;
+
+    transition: 1s ease-out;
+
+    &.show {
+        opacity: 1;
+    }
+
+
+    // Shouldn't be visible on touch. else it would show up when tapping and not disappear automatically
+    @media screen and (max-width: 600px){
+        .pixels,.pixels div {
+            display: none;
+            animation: none;
+        }
+    }
+
+    @media screen and (max-height: 919px) and (orientation: landscape){
+        .pixels,.pixels div {
+            display: none;
+            animation: none;
+        }
+    }
+}
+
+// Adds random points that appear when the mouse point is near
+@for $i from 0 through 700{
+    .pixels div.c#{$i} {
+        $size: random(10);
+        height: #{$size}px;
+        width: #{$size}px;
+        top: #{random(100)}vh;
+        right: #{random(100)}vw;
+        animation-delay: #{calc($size / 5)}s;
+    }
+}
+
+@keyframes blink{
+    0% { transform: scale(0.1); }
+    100% { transform: scale(1); }
+}
+

@@ -1,0 +1,95 @@
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50% 50%;
+    gap: 2ch;
+    padding: 2ch;
+    padding-left: 0ch;
+    padding-right: 0ch;
+    margin-bottom: 2ch;
+
+    @media screen and (max-width:1200px){
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        .nes {
+            display: none !important;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 3px;
+        padding: 3ch;
+        position: relative;
+        overflow: hidden;
+        transition: 0.25s ease-out;
+        text-decoration: none !important;
+        color: inherit !important;
+        min-width: 300px;
+        min-height: 200px;
+
+        background-position: center;
+        background-size: cover;
+
+        @media screen and (max-width: 600px){
+            min-height: 50%;
+            padding: 0px;
+        }
+
+        label{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, black);
+            padding: 1ch;
+            padding-top: 100%;
+
+            @media screen and (max-width: 600px) {
+                position: relative;
+            }
+
+        }
+
+        b { position: relative; }
+
+        b::after{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            bottom: -0.5ch;
+            width: 0%;
+            border-bottom: 0.2ch solid white;
+            content: "";
+            transition: 0.5s ease-out;
+        }
+
+        &:hover b::after{
+            width: 100%;
+            left: 0%;
+        }
+
+        &:hover{
+            transform: scale(105%);
+            z-index: 100;
+            box-shadow: 0 0 10ch solid white;
+        }
+    }
+
+    @for $i from 1 through 10 {
+    .row#{$i}{
+        grid-row: $i;
+    }
+    .spanrow#{$i}{
+        grid-row: 1 / #{1+$i};
+    }
+    }
+}

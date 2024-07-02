@@ -1,0 +1,4 @@
+title: 'News Images'
+disk: assets
+allow_uploads: true
+create_folders: true

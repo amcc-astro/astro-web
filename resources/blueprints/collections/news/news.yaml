@@ -1,0 +1,94 @@
+title: News
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              container: news_images
+              folder: featured
+              restrict: true
+              type: assets
+              display: 'Featured Image'
+              instructions: "The image to be shown as the article's thumbnail as well as header"
+          -
+            handle: abstract
+            field:
+              type: textarea
+              display: Abstract
+              instructions: 'A short extract of the article, or a concise description on what it conatins.'
+          -
+            handle: article_content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - underline
+                - strikethrough
+                - superscript
+                - subscript
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              smart_typography: true
+              reading_time: true
+              word_count: true
+              remove_empty_nodes: false
+              type: bard
+              display: 'Article Content'
+              container: news_images
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
+              default: current
+              localizable: true
+              max_items: 1
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+              visibility: hidden
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

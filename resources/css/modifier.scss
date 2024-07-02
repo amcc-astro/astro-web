@@ -1,0 +1,173 @@
+// Generic classes used for behaviour and style modifications
+
+.bg{
+    &-default {
+        background-color: #2f0906 !important;
+        color: white !important;
+    }
+
+    &-secondary {
+        background-color: #591b03 !important;
+        color: white !important;
+    }
+
+    &-dark {
+        background-color: #111111 !important;
+        color: white !important;
+    }
+
+    &-light {
+        background-color: #FAFAFA !important;
+        color: black !important;
+    }
+
+    &-green {
+        background-color: #1BC841 !important;
+        color: black !important;
+    }
+
+    &-blue {
+        background-color: #106CE1 !important;
+        color: black !important;
+    }
+
+    &-red {
+        background-color: #C81B1B !important;
+        color: black !important;
+    }
+
+    &-orange {
+        background-color: #C8741B !important;
+        color: black !important;
+    }
+
+    &-purple {
+        background-color: #A21BC8 !important;
+        color: black !important;
+    }
+}
+
+.fg{
+    &-dark {
+        color: #111111 !important;
+    }
+
+    &-light {
+        color: #FAFAFA !important;
+    }
+
+    &-green {
+        color: #1BC841 !important;
+    }
+
+    &-blue {
+        color: #106CE1 !important;
+    }
+
+    &-red {
+        color: #C81B1B !important;
+    }
+
+    &-orange {
+        color: #C8741B !important;
+    }
+
+    &-purple {
+        color: #A21BC8 !important;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .desktop {
+        visibility: hidden;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    overflow: auto;
+
+    &.mobile-column {
+        &:not(.bp\:800){
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+            }
+        }
+
+        &.bp\:800{
+            @media screen and (max-width: 800px){
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+
+    &.mobile-row {
+        &:not(.bp800){
+            @media screen and (max-width: 600px){
+                flex-direction: row;
+            }
+        }
+
+        .bp800{
+            @media screen and (max-width: 800px){
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.sizing{
+    &\:fit {
+        width: fit-content;
+        flex-grow: 0;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+
+    @media screen and (max-width: 600px){
+        position: relative;
+    }
+}
+
+.center-children {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.center-children\:ismobile {
+
+    &:not(.bp\:800){
+        @media screen and (max-width: 600px){
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+
+    &.bp\:800 {
+        @media screen and (max-width: 800px){
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}

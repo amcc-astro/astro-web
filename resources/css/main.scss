@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
+body {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    background: linear-gradient(140deg, #460000, 30%, black);
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+// .orientbanner {
+//     display: flex;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100dvw;
+//     height: 100dvh;
+//     background-color: black;
+//     color: white;
+//     z-index: 999999;
+//     text-align: center;
+//     align-content: center;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 10rem;
+//     visibility: hidden;
+//
+//     @media screen and ( max-height: 600px ) and ( min-aspect-ratio: 1/1 ) {
+//         visibility: visible;
+//     }
+// }
+
+.orientbanner { display: none; }
+
+page {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 2ch;
+    padding-left: 4ch;
+    padding-right: 4ch;
+    @media screen and (max-width: 600px){
+        padding-left: 1ch;
+        padding-right: 1ch;
+    }
+    color: hsla(100%, 100%, 100%, 88%)
+}
+
+@import 'stars.scss';
+@import 'typography.scss';
+@import 'hero.scss';
+@import 'nav.scss';
+@import 'cardgrid.scss';
+@import 'thumbnailgrid.scss';
+@import 'slides.scss';
+@import 'pillgrid.scss';
+@import 'input.scss';
+@import 'article.scss';
+@import 'banner.scss';
+@import 'modifier.scss';
