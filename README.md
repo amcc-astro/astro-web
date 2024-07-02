@@ -1,40 +1,35 @@
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+# Anadameth Astronomy Web
 
-## About Statamic
+The Official website for Astronomy Society of Anandamaithreya Central College, Balangoda, Sri Lanka.
 
-Statamic is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+## Development and Set-Up
 
-> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][cms-repo].
+After cloning the repository, navigate to the directory and run
 
+```bash
+$ composer install
+$ php please make:user
+```
+This will install required packages and create the default user. To test the website, use
 
-## Learning Statamic
+```bash
+$ php artisan serve
+```
+And navigate your browser to https://localhost:8000/
 
-Statamic has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+If you plan on modifying styling or JS components you will need to install required NPM packages and start the development vite server:
 
-## Support
+```bash
+$ npm install
+$ npm run dev
+```
 
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://statamic.com/forum) and in [Discord][discord].
+After development, to package the modified resources use,
 
+```bash
+$ npm run build
+```
 
-## Contributing
+## Copyright
 
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
-
-
-## Code of Conduct
-
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
-
-
-## Important Links
-
-- [Statamic Main Site](https://statamic.com)
-- [Statamic Documentation][docs]
-- [Statamic Core Package Repo][cms-repo]
-- [Statamic Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
-
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+This work is copyrighted to Anadameth Astronomy Society, Anandamaithreya Central College, Sri Lanka under ![LICENSE.md](GPLv2). Article text and images are CC-BY-SA unless otherwise specified within the content.
