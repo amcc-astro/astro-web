@@ -2,12 +2,21 @@
 
 @font-face {
   font-family: 'Orbitron';
-  src: url(../../assets/fonts/Orbitron/Orbitron.ttf);
+  src: url(../fonts/Orbitron/Orbitron.ttf);
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../fonts/OpenSans/OpenSans.ttf);
 }
 
 body {
     font-family: "Orbitron", helvetica, sans-serif;
     font-size: 0.9rem;
+}
+
+article {
+    font-family: "OpenSans", helvetica, sans-serif;
 }
 
 h1 {

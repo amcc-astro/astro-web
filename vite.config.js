@@ -26,6 +26,8 @@ export default defineConfig({
                 'resources/css/typography.scss',
                 'resources/css/image.scss',
                 'resources/js/main.js',
+                'resources/fonts/Orbitron/Orbitron.ttf',
+                'resources/fonts/OpenSans/OpenSans.ttf',
 
                 // Control Panel assets.
                 // https://statamic.dev/extending/control-panel#adding-css-and-js-assets
